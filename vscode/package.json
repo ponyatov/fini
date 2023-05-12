@@ -1,0 +1,60 @@
+{
+  "name": "fini",
+  "version": "0.0.1",
+  "description": "FORTH-like init script",
+  "publisher": "dponyatov",
+  "author": {
+    "name": "Dmitry Ponyatov",
+    "email": "dponyatov@gmail.com"
+  },
+  "license": "MIT",
+  "categories": [
+    "Programming Languages",
+    "Debuggers",
+    "Notebooks",
+    "Snippets"
+  ],
+  "homepage": "https://bitbucket.org/ponyatov/fini/src/shadow/",
+  "icon": "logo.png",
+  "engines": {
+    "vscode": "^1.50.0"
+  },
+  "main": "extension.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "fini.hello",
+        "title": "fini: Hello"
+      }
+    ],
+    "languages": [
+      {
+        "id": "fini",
+        "aliases": [
+          "fini"
+        ],
+        "extensions": [
+          ".ini",
+          ".f"
+        ],
+        "configuration": "./fini.configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "fini",
+        "scopeName": "script.fini",
+        "path": "./fini.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "fini",
+        "path": "./snippets.json"
+      }
+    ]
+  }
+}
